@@ -2035,7 +2035,10 @@ def _get_errors(filename):
     ],
 )
 def test_outputs(filename, line, message):
-    errors = _get_errors(filename)
+    from pathlib import Path
+    test_dir = Path("targets")
+    filepath = test_dir / filename
+    errors = _get_errors(filepath)
     idxes = []
     for idx, error in enumerate(errors):
         # Some lines have multiple errors and

@@ -1,7 +1,7 @@
-from Cryptodome.Cipher import AES
-from Cryptodome import Random
+from Crypto.Cipher import AES
+from Crypto import Random
 
-from . import CryptoMaterialsCacheEntry
+from tests import CryptoMaterialsCacheEntry
 
 
 def test_pycrypto():
